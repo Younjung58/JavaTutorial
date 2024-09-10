@@ -38,50 +38,51 @@ public class _09_test {
 		int y=in.nextInt();
 		int bomb = a[x][y];
 		System.out.println("입력한 좌표: "+x+", "+y);
-		System.out.println(bomb);
+//		System.out.println(bomb);
 		
 		
-		for (int i = y; ; ) {
-			if(y==0 & a[x][y+1]==bomb & a[x][y+2]==bomb) {
-				if(x!=0 & a[x][i]==bomb) {
-					
+		for (int i = x; ;) {
+			if(y==0 && a[x][y+1]==bomb && a[x][y+2]==bomb) {
+				for (; i >= 0; i--) {
+					for (int j = y; j <= y+2; j++) {
+						if(i!=0) {
+							a[i][j]=a[i-1][j];
+						}else if(i==0) {
+							a[i][j]=r.nextInt(10);
+						}	
+					}
+				}
+			}else if(y==a[0].length-1 && a[x][y-1]==bomb && a[x][y-2]==bomb) {
+				for (; i >= 0; i--) {
+					for (int j = y; j >= y-2; j--) {
+						if(i!=0) {
+							a[i][j]=a[i-1][j];
+						}else if(i==0) {
+							a[i][j]=r.nextInt(10);
+						}	
+					}
+				}
+			}else if(y>0&&y<a[0].length-1&&a[x][y-1]==bomb && a[x][y+1]==bomb){
+				for (; i >= 0; i--) {
+					for (int j = y-1; j <= y+1; j++) {
+						if(i!=0) {
+							a[i][j]=a[i-1][j];
+						}else if(i==0) {
+							a[i][j]=r.nextInt(10);
+						}	
+					}
 				}
 			}
+		break;
 		}
 		
-			// 제거대상 여부 확인
-//			if(y==0) {
-//				if(a[x][y+1]==bomb & a[x][y+2]==bomb) {
-//					for (int i = y; i <= y+2; i++) {
-//						a[x][i]=999;
-//					}
-//				}
-//			}else if(y==a[0].length) {
-//				if(a[x][y-1]==bomb & a[x][y-2]==bomb) {
-//					for (int i = y; i >= y-2; i++) {
-//						a[x][i]=999;
-//					}
-//				}
-//			}else {
-//				if(a[x][y-1]==bomb & a[x][y+1]==bomb) {
-//					for (int i = y-1; i <= y+1; i++) {
-//						a[x][y]=999;
-//					}
-//				}
-//			}
-//			
-//			// 제거 후(999변경후) 위의 숫자 아래로 내려오게
-//			for (int i = 0; i < a.length; i++) {
-//				for (int j = 0; j < a[0].length; j++) {
-//					if(a[i][j]==999 & i!=0) {
-//						a[i][j]=a[i-1][j];
-//						a[i-1][j]=r.nextInt(10);
-//					}else if(a[i][j]==999 & i==0) {
-//						a[i][j]=r.nextInt(10);
-//					}
-//				}
-//			}
-		
+		// 결과 확인
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[0].length; j++) {
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
 
 	}
 
