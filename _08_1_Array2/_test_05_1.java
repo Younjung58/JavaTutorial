@@ -48,6 +48,8 @@ public class _test_05_1 {
 					}
 				}
 			}
+			
+			
 			if(cnt%4==2) {
 				for (int j = rmin; j <= rmax; j++) {
 					a[j][cmax]=num;
