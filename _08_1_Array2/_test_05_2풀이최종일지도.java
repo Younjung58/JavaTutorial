@@ -36,7 +36,8 @@ public class _test_05_2풀이최종일지도 {
 			
 			// 배열 값 재배치가 일어날때 빈공간으로 사용할 수 있는 곳 -> 왼쪽 위 꼭짓점(초기에 0,0)
 			// 배열 값 재배치
-			for (;cmax/2!=0&rmax/2!=0;cmax--,cmin++,rmax--,rmin++) {
+			for (;cmax/2!=0&rmax/2!=0;cmax--,cmin++,rmax--,rmin++) {	
+				// 사각형의 가로.세로변이 있을때까지 진행하되,그 변의 길이를 한바퀴 돌때마다 감소 
 				emp = a[rmin][cmax];	// 5를 emp에 저장
 				for (int i = cmax; i > cmin; i--) {				// 사각형 윗변
 					a[rmin][i] = a[rmin][i-1];
