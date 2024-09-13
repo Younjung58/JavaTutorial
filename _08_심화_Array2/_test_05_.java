@@ -1,6 +1,6 @@
 package _08_심화_Array2;
 
-public class _test_05 {
+public class _test_05_ {
 
 	public static void main(String[] args) {
 		int[][] a = new int[4][5];
