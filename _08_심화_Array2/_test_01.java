@@ -24,8 +24,9 @@ public class _test_01 {
 		// 따라서 열의 4, 3, 2, 1, 0 이 바깥 for문을 돌고
 		// 행의 0,1,2,3 이 안쪽 for문을 돌면 됨
 		
-		for (int i = a[0].length-1; i >= 0; i--) {
-			for (int j = 0; j < a.length; j++) {
+		// 배열 값 저장
+		for (int i = a[0].length-1; i >= 0; i--) {		// 열의 반복(역순)
+			for (int j = 0; j < a.length; j++) {		// 행의 반복
 				a[j][i] = num;
 				num++;
 //				System.out.print(a[j][i]+" ");      // 배열 입력 확인
@@ -33,10 +34,12 @@ public class _test_01 {
 //			System.out.println();
 		}
 		
+		// 코드의 재사용성을 높이기위해서(수정or업데이트 등등) for문(if문)을 분리하여 하나의 역할만 하도록 설계(저장-출력)
+		
 		// 배열 값 출력
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {
-				System.out.print(a[i][j]+" ");
+				System.out.print(a[i][j]+"\t");	  //이때 t는 개행문자..t의 의미는 tab만큼 띄워라라는것.
 			}
 			System.out.println();
 		}

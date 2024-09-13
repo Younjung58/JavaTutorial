@@ -25,8 +25,8 @@ public class _test_02 {
 		// 열의 4,3,2,1,0 이 안쪽 for문을 돌면 됨
 		
 		// 배열값 입력
-		for (int i = a.length-1; i >= 0; i--) {
-			for (int j = a[0].length-1; j >= 0; j--) {
+		for (int i = a.length-1; i >= 0; i--) {		// 헹의 반복(역순)
+			for (int j = a[0].length-1; j >= 0; j--) {	// 열의 반복(역순)
 				a[i][j] = num;
 				num++;
 			}
@@ -35,7 +35,7 @@ public class _test_02 {
 		// 배열값 출력
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {
-				System.out.print(a[i][j]+" ");
+				System.out.print(a[i][j]+"\t");
 			}
 			System.out.println();
 		}

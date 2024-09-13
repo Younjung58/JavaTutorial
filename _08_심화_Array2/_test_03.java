@@ -26,14 +26,14 @@ public class _test_03 {
 		// 짝수면 0,1,2,3,4 가 안쪽 / 홀수면 4,3,2,1,0 이 for문을 돌면 됨
 		
 		// 배열값 입력
-		for (int i = 0; i < a.length; i++) {
-			if(i%2==0) {
-				for (int j = 0; j < a[0].length; j++) {
+		for (int i = 0; i < a.length; i++) {		// 행의 반복
+			if(i%2==0) {		// 짝수행일때
+				for (int j = 0; j < a[0].length; j++) {		// 열의 반복
 					a[i][j]=num;
 					num++;
 				}
-			}else {
-				for (int j = a[0].length-1; j >= 0; j--) {
+			}else {		// 홀수행일때
+				for (int j = a[0].length-1; j >= 0; j--) {		//열의 반복(역순)
 					a[i][j]=num;
 					num++;
 				}
