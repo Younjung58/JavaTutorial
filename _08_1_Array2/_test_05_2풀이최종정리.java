@@ -1,6 +1,6 @@
 package _08_1_Array2;
 
-public class _test_05_2풀이최종일지도 {
+public class _test_05_2풀이최종정리 {
 
 	public static void main(String[] args) {
 			int [][] a = {{1,2,3,4,5},
