@@ -48,9 +48,6 @@ public class _n_test {
 		
 		// 1부터 5000까지중 제외조건 빼고 더하기
 		int sum = 0;
-//		int a =1234;
-//		sum = a/1000+(a%1000)/100+(a%100)/10+a%10 + a;
-//		System.out.println(sum);
 		
 		
 		
