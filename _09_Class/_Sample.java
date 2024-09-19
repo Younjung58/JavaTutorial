@@ -33,6 +33,8 @@ public class _Sample {
 		// 객체를 참조할 주소가 없기때문에 에러가 발생
 		System.out.println(r3.nextInt(4));
 		
+		// GC : garbage collector 
+		// -> 객체를 생성하면, 힙영역에 저장이되는데, 이를 아무도 참조하지 않으면 제거대상으로 여겨서 생성된 객체를 삭제하는역할
 	}
 
 }
