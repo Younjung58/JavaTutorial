@@ -2,7 +2,7 @@ package _09_Class_Test;
 
 import java.util.Scanner;
 
-// 자동차 등록, 조회, 전체보기, 삭제의 기능을 수행할 클래스 생성(car_M)
+// 자동차 등록, 조회, 전체보기, 삭제의 기능을 수행할 클래스 정의(car_M)
 public class car_M {
 	car_R [] carinfo = new car_R [7];
 	// 자동차 7대를 저장할 배열 공간 생성(참조변수로 배열 생성시 초기값이 null)
@@ -29,7 +29,7 @@ public class car_M {
 			}
 		}
 	}
-		public void add() {		// 차량 등록 메소드 생성
+		public void add() {		// 차량 등록 메소드 정의
 			car_R a = new car_R();
 			System.out.println("등록할 자동차의 번호를 입력하세요(번호4자)");
 			a.car_num = in.nextInt();
@@ -47,7 +47,7 @@ public class car_M {
 			}
 		}
 		
-		public void Search() {	// 차량 조회 메소드 생성
+		public void Search() {	// 차량 조회 메소드 정의
 			System.out.println("조회할 차량 번호를 입력하세요(번호4자");
 			int a = in.nextInt();
 			for (int i = 0; i < carinfo.length; i++) {
@@ -59,7 +59,7 @@ public class car_M {
 			}
 		}
 		
-		public void allList() {		// 전체조회 메소드 생성
+		public void allList() {		// 전체조회 메소드 정의
 			System.out.println("전체조회를 선택하셨습니다.");
 			for (int i = 0; i < carinfo.length; i++) {
 				if(carinfo[i]!=null) {
@@ -68,7 +68,7 @@ public class car_M {
 			}
 		}
 		
-		public void Delete() {	// 차량 삭제 메소드 생성
+		public void Delete() {	// 차량 삭제 메소드 정의
 			System.out.println("삭체할 차량의 번호를 입력하세요(번호 4자)");
 			int a = in.nextInt();
 			for (int i = 0; i < carinfo.length; i++) {
