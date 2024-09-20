@@ -86,8 +86,9 @@ public class TrainCenter {
 				}
 			}
 			if(i==train.length-1) {
-				System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
+				// break가 걸리지않고, 끝번호까지 되었을때(즉, 해당 값이 존재하지 않는 기차번호일때) 에러발생 문구 출력
 				// 저장되어있는 전체 기차 중에 입력받은 기차가 존재하지 않을때 에러 발생
+				System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
 				break;					
 			}
 		}
@@ -118,8 +119,8 @@ public class TrainCenter {
 				}
 			}
 			if(i==train.length-1) {
+				// break가 걸리지않고, 끝번호까지 되었을때(즉, 해당 값이 존재하지 않는 기차번호일때) 에러발생 문구 출력
 				System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
-				// 저장되어있는 전체 기차 중에 입력받은 기차가 존재하지 않을때 에러 발생
 				break;					
 			}
 		}
