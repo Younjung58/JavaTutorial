@@ -1,8 +1,6 @@
 package _JAVA_수업정리;
 
 public class _JAVA_클래스와객체 {
-
-	public static void main(String[] args) {
 		
 //		<클래스와 객체>
 //		레시피 - 클래스
@@ -63,6 +61,6 @@ public class _JAVA_클래스와객체 {
 		
 		// 매개변수는 메소드를 불러올때 가져와지는 변수
 		// 멤버변수는 클래스를 선언할 때 사용하는 변수
-	}
+
 
 }
