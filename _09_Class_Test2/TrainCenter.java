@@ -5,10 +5,10 @@ import java.util.Scanner;
 // 전체 기차를 관리(수정,조회,수리)할 클래스 정의
 public class TrainCenter {
 	
-	TrainOne[] Train = new TrainOne[5];		
-	// TrainOne객체의 주소를 저장할 배열의 길이를 저장할 기차 갯수보다(기차번호 배열길이) 크게 선언하여 시스템 에러를 확인
+	TrainOne[] Train = new TrainOne[4];		
+	// TrainOne객체의 주소를 저장할 배열의 길이를 기차번호 배열길이와 같게 선언(기차번호가 있을때만 기차등록이 가능하므로)
 	int [] T_num = {1111,2222,3333,4444};
-	String [] T_name = {"무궁화","새마을","무궁화","새마을"};
+	String [] T_name = {"무궁화","새마을","무궁화","새마을",""};
 	Scanner in = new Scanner(System.in);
 	
 	TrainCenter() {
