@@ -83,11 +83,12 @@ public class TrainCenter {
 					String time = in.nextLine();
 					train[i].train_arrtime = time;
 					break;
-				}else if(i==train.length-1) {
-					System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
-					// 저장되어있는 전체 기차 중에 입력받은 기차가 존재하지 않을때 에러 발생
-					break;					
 				}
+			}
+			if(i==train.length-1) {
+				System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
+				// 저장되어있는 전체 기차 중에 입력받은 기차가 존재하지 않을때 에러 발생
+				break;					
 			}
 		}
 	}
@@ -115,7 +116,8 @@ public class TrainCenter {
 					train[i].train_status = "수리중";
 					break;
 				}
-			}else if(i==train.length-1) {
+			}
+			if(i==train.length-1) {
 				System.out.println("존재하지 않는 기차 번호입니다.  -- 에러발생");
 				// 저장되어있는 전체 기차 중에 입력받은 기차가 존재하지 않을때 에러 발생
 				break;					
