@@ -16,4 +16,8 @@ public class T_one {
 		// String의 성격은 String의 자료형(문자열)을 결과값으로 호출한 쪽에 넘겨줘야한다는 것
 		return tNum;
 	}
+	
+	public void setNum(String a) {		// 입력받은 값을 받아와서 넣음
+		tNum = a;
+	}
 }

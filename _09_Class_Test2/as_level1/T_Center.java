@@ -71,7 +71,9 @@ public class T_Center {
 		Scanner in = new Scanner(System.in);
 		T_one tempT = new T_one();
 		System.out.println("기차 번호를 입력하세요.");
-		tempT.tNum = in.nextLine();
+//		tempT.tNum = in.nextLine();
+		String a =in.nextLine();		// private한 멤버변수에 값을 넣어야하므로, 그 기능을 가진 메서드를 setNum으로 정의하고
+		tempT.setNum(a);				// 입력받은 값을 그 메서드에 반환시킴
 		System.out.println("기차 시간을 1203형식으로 입력하세요.");
 		tempT.tTime = in.nextLine();
 		
