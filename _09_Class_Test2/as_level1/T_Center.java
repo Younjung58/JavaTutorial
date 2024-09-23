@@ -51,7 +51,11 @@ public class T_Center {
 		
 		// 조건을 걸어본다. 기차번호는 유니크하다.
 		for (int i = 0; i < tlist.length; i++) {
-			if(tlist[i].tNum.equals(modNum)) {
+			
+			String mnum = tlist[i].gettNum();		
+			// T_one에 있는 gettNum의 메서드(부탁기능)를 사용하여 값을 받아옴(직접 다른 클래스에 있는 멤버변수에 접근하는 'tlist[i].tNum'의 형태를 대신함)
+			if(mnum.equals(modNum)) {
+//				if(tlist[i].tNum.equals(modNum)){		-> class에 있는 tNum멤버변수가 private의 성격이라면 에러 발생.(무조건 메서드사용)
 				// 기차번호가 유니크하다는 것은 뒤에 있는 기차 번호랑 중복이 될 수 없다는 것.
 				// 그래서 바로 수정이 가능하다.
 				System.out.println("수정 시간을 입력하세요.");
