@@ -6,6 +6,7 @@ level1
 
 
 
+
 level2
 고객관리 및 이벤트관리 프로그램
 고객관리는 level1과 같다.
@@ -16,12 +17,12 @@ level2
 
 
 // level 1 분석
-1. 고객관리 시작 class				
+1. 관리시스템 시작의 class			-> 고객관리 / 이벤트관리		
 2. 고객 각각의 정보를 관리할 class		-> 아이디 / 이름 정보
 3. 전체 고객을 관리할 class			-> 기능 : 고객가입, 정보보기, 수정하기, 삭제하기
 
 // level 2분석 추가
 4. 각각의 이벤트를 관리할 class 		-> 이벤트 제목 / 내용
-3의 class에 기능 추가 -> 전체 이벤트를 관리 -> 기능 : 이벤트 등록, 이벤트 전체보기
+5. 전체 이벤트를 관리할 class			-> 기능 : 이벤트 등록, 이벤트 전체보기
 
-총 4개의 class가 필요함. (1. Manage_main, 2. Customer_one, 3. Manage_all, 4. Event_one)
+총 5개의 class가 필요함. (1. Manage_main, 2. Customer_one, 3. Customer_all, 4. Event_one, 5. Event_all)
