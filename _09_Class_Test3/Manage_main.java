@@ -9,6 +9,8 @@ public class Manage_main {
 		Customer_all custom = new Customer_all();	
 		Event_all event = new Event_all();
 		// 고객과 이벤트의 정보가 저장되어있어야하므로 하나의 객체의 주소로 각각을 저장하여 해당 메소드를 사용하는 개념으로 작성
+		// 하나의 객체의 주소만을 생성하여 그 주소값으로 계속 호출하면 그 클래스의 멤버변수에 저장된 값이 유지되므로 
+		// 멤버변수로 객체를 생성하여 주소값을 저장
 		
 		System.out.println("*****고객관리 및 이벤트관리 프로그램*****");
 		while(true) {
