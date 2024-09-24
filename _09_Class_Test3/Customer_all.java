@@ -9,7 +9,7 @@ public class Customer_all {
 	Scanner in = new Scanner(System.in);
 	
 	public void Customer_all() {
-		
+	
 		while(true) {
 		// TODO Auto-generated constructor stub
 			System.out.println("*****고객관리 프로그램입니다.*****");
