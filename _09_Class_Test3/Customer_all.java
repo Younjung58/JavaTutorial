@@ -6,10 +6,10 @@ public class Customer_all {
 
 	// 최대 고객이 5명이라고 정의 -> 그 주소를 저장하기 위하여 길이가 5인 배열을 사용하여 선언
 	Customer_one [] cus = new Customer_one[5];
+	Customer_one id = null;
 	Scanner in = new Scanner(System.in);
-	
+	Event_all a = null;
 	public void Customer_all() {
-	
 		while(true) {
 		// TODO Auto-generated constructor stub
 			System.out.println("*****고객관리 프로그램입니다.*****");
@@ -17,7 +17,8 @@ public class Customer_all {
 			System.out.println("2. 고객 정보보기");
 			System.out.println("3. 고객 정보수정하기");
 			System.out.println("4. 고객 정보삭제하기");
-			System.out.println("5. 메인화면으로 돌아가기");
+			System.out.println("5. 등록된 이벤트 보기");
+			System.out.println("6. 메인화면으로 돌아가기");
 			System.out.println("원하는 항목을 선택하여 번호를 입력하세요 > ");
 			int selNum = in.nextInt();
 			in.nextLine();
@@ -31,11 +32,20 @@ public class Customer_all {
 			}else if(selNum == 4) {
 				del_C();
 			}else if(selNum == 5) {
+				save(a);
+				a.allList_E();
+			}else if(selNum == 6) {
 				break;
 			}
 		}
 	}
 	
+
+	public void save(Event_all event) {	// Manage_main class에서 생성된 event의 주소를 받을 메서드 정의
+		// TODO Auto-generated method stub
+		a = event;
+	}
+
 	private void add_C() {		// 고객 가입 기능의 메소드를 정의
 		// TODO Auto-generated method stub
 		Customer_one customer = new Customer_one();		// 고객한명의 정보를 저장하기 위해서 생성한 객체의 주소 저장할 참조변수 customer에 저장
@@ -66,6 +76,7 @@ public class Customer_all {
 					break;
 				}
 			}
+	/////////
 			if(i==cus.length-1) {
 				System.out.println("해당 아이디는 존재하지 않습니다.");
 				break;
@@ -115,5 +126,10 @@ public class Customer_all {
 			}				
 		}
 	}
+	
+//	public void save(Event_all event) {				// Manage_main class에서 생성된 event의 주소를 받을 메서드 정의
+//		Event_all a = event;
+//		a.allList_E();
+//	}
 	
 }

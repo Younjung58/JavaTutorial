@@ -2,6 +2,8 @@ package _09_Class_Test3;
 
 public class Event_one {
 	
+	
+	private String m_id = "";
 	private String e_name = "";
 	private String e_comment = "";
 
@@ -12,6 +14,10 @@ public class Event_one {
 	public void prt() {			// 이벤트 목록을 조회했을 때 보여줄 기능의 메소드 정의
 		System.out.println("---등록된 이벤트입니다.---");
 		System.out.println("이벤트 제목: "+e_name+" / 이벤트 내용: "+e_comment);
+	}
+	
+	public void mem_id(String a) {
+		m_id = a;
 	}
 	
 	public void event_name(String a) {		

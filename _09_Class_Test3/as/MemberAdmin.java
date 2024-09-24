@@ -39,17 +39,24 @@ public class MemberAdmin {
 		System.out.println("아이디를 입력하세요.");
 		String id = in.nextLine();
 		temp.id = id;
-		System.out.println("이름을 입력하세요.");
-		String name = in.nextLine();
-		temp.name = name;
-		
-		for (int i = 0; i < mlist.length; i++) {
-			if(mlist[i]==null) {
-				mlist[i]=temp;
-				break;
+		if(duplexIDcheck(id)) {		// 아이디 중복체크		
+			// call -> 실행 -> 리턴
+			System.out.println("아이디 중복입니다. 다시 입력하세요.");
+//			addUser();
+		}else {
+			System.out.println("이름을 입력하세요.");
+			String name = in.nextLine();
+			temp.name = name;
+			
+			for (int i = 0; i < mlist.length; i++) {
+				if(mlist[i]==null) {
+					mlist[i]=temp;
+					break;
+				}       
 			}
 			temp=null;	// temp에 저장된 주소값이 필요없어서 null처리
-			in.close();	// Scanner에 필요한 자원 반납
+//				in.close();	// Scanner에 필요한 자원 반납
+			
 		}
 	}
 	private void allListUser() {
@@ -59,6 +66,20 @@ public class MemberAdmin {
 				mlist[i].prt();
 			}
 		}
-		
+	}
+	
+	// 재사용성을 높이기 위하여 아이디 중복체크를 해주는 메소드를 정의하여 사용
+	public boolean duplexIDcheck(String id){		// 재사용성을 높이기 위하여 아이디 중복체크를 해주는 메소드를 정의
+		for (int i = 0; i < mlist.length; i++) {
+			if(mlist[i]!=null) {
+				if(mlist[i].id.equals(id)) {
+					return true;
+					// return을 만나면 함수 종료되고
+					// 호출부로 이동된다. break필요없음
+					// 즉, 호출부로 값을 들고 이동하는 것 자체가 break기능을 포함.
+				}
+			}
+		}
+		return false;
 	}
 }
