@@ -10,6 +10,8 @@ public class Event_all {
 		
 	Scanner in = new Scanner(System.in);
 	
+//	Event_one event = new Event_one();
+	
 	Customer_all custo = null;
 	
 	public void Event_all() {
@@ -35,8 +37,8 @@ public class Event_all {
 		}
 	}
 	
-	public void c_name(Customer_all customer) {
-		custo = customer;
+	public void c_name(Customer_all custom) {
+		custo = custom;
 	}
 	
 	public void add_E() {		// 이벤트 등록하기 기능의 메소드를 정의
@@ -45,22 +47,27 @@ public class Event_all {
 		System.out.println("*이벤트 등록을 선택하셨습니다.* ");
 		System.out.println("아이디를 입력하세요. > ");
 		String a = in.nextLine();
+		c_name(custo);
 		for (int i = 0; i < custo.cus.length; i++) {
-			if(custo.cus[i].cus_id().equals(a)) {
-				System.out.println("이벤트 제목을 입력하세요. > ");
-				a = in.nextLine();
-				event.event_name(a);
-				System.out.println("이벤트 내용을 입력하세요. > ");
-				a = in.nextLine();
-				event.evet_comment(a);
-				for (int j = 0; i < evt.length; i++) {
-					if(evt[j] == null) {
-						evt[j] = event;
-						break;
+			if(custo.cus[i]!=null) {
+				if(custo.cus[i].cus_id().equals(a)) {
+					event.mem_id(a);
+					System.out.println("이벤트 제목을 입력하세요. > ");
+					a = in.nextLine();
+					event.event_name(a);
+					System.out.println("이벤트 내용을 입력하세요. > ");
+					a = in.nextLine();
+					event.evet_comment(a);
+					for (int j = 0; j < evt.length; j++) {
+						if(evt[j] == null) {
+							evt[j] = event;
+							break;
+						}
 					}
+				}else {
+					System.out.println("해당아이디는 존재하지 않습니다.");
 				}
-			}else {
-				System.out.println("해당아이디는 존재하지 않습니다.");
+				
 			}
 		}
 		

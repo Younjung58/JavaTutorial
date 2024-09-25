@@ -11,6 +11,7 @@ public class Customer_all {
 	Event_all a = null;
 	public void Customer_all() {
 		while(true) {
+			save(a);
 		// TODO Auto-generated constructor stub
 			System.out.println("*****고객관리 프로그램입니다.*****");
 			System.out.println("1. 고객 가입하기");
@@ -32,7 +33,7 @@ public class Customer_all {
 			}else if(selNum == 4) {
 				del_C();
 			}else if(selNum == 5) {
-				save(a);
+//				save(a);
 				a.allList_E();
 			}else if(selNum == 6) {
 				break;
@@ -68,15 +69,22 @@ public class Customer_all {
 		// TODO Auto-generated method stub
 		System.out.println("*고객 정보보기를 선택하셨습니다.*");
 		System.out.println("조회를 원하시는 고객의 아이디를 입력하세요. > ");
-		String a = in.nextLine();
+		String b = in.nextLine();
+//		save(a);
 		for (int i = 0; i < cus.length; i++) {		// 고객 아이디는 중복이 안되고, 유니크하다고 가정
 			if(cus[i]!=null) {
-				if(cus[i].cus_id().equals(a)) {
+				if(cus[i].cus_id().equals(b)) {
 					cus[i].prt();
+					for (int j = 0; j < a.evt.length; j++) {
+						if(a.evt[j]!=null) {
+							if(b.equals(a.evt[j].member_id())) {
+								a.evt[j].prt();
+							}							
+						}
+					}
 					break;
 				}
 			}
-	/////////
 			if(i==cus.length-1) {
 				System.out.println("해당 아이디는 존재하지 않습니다.");
 				break;

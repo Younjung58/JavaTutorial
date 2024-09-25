@@ -28,12 +28,12 @@ public class Manage_main {
 			// 별도로 메서드 처리 하겠다.
 		if(custom == null) {
 			custom = new Customer_all();
-			event.c_name(custom);
 		}
 		if(event == null) {
 			event = new Event_all();
-			custom.save(event);
 		}
+		custom.save(event);
+		event.c_name(custom);
 		prt();
 	}
 	

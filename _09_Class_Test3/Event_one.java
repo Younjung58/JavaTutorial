@@ -39,5 +39,9 @@ public class Event_one {
 		// 멤버변수 e_comment에 저장된 값을 호출시에 반환해줄 메소드를 정의
 		return e_comment;
 	}
+	
+	public String member_id() {
+		return m_id;
+	}
 
 }

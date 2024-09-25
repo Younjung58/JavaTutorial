@@ -12,9 +12,6 @@ public class Customer_one {
 	
 	public void prt() {		// 고객 정보를 보여줄 메소드를 정의
 		System.out.println("---해당 고객의 정보입니다---");
-		if(c_id.equals())
-		
-		
 		System.out.println("고객의 아이디: "+c_id+" / 고객의 이름: "+c_name);
 	}
 	
