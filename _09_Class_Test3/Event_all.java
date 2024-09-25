@@ -10,8 +10,6 @@ public class Event_all {
 		
 	Scanner in = new Scanner(System.in);
 	
-	Event_one event = new Event_one();
-	
 	Customer_all custo = null;
 	
 	public void Event_all() {
