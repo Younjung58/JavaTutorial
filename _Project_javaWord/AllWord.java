@@ -15,7 +15,6 @@ public class AllWord {
 		if(words==null) {
 			words = new ArrayList<>();
 		}
-		prt();
 	}
 	
 	public void save(WordGame a) {
