@@ -97,3 +97,11 @@
 </div>
 </br></br>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Younjung58&layout=compact"><br>
+<div>
+  <h4>JAVA 클래스와 객체 추가학습</h4>
+  <h6>클래스와 객체 추가문제(심화버전)를 풀려고 했는데 생각보다 마음대로 문제가 풀리지 않아서<br>
+      아직 기본에 대한 완벽한 이해가 부족하다고 생각했다.<br>
+      이를 해결하기 위해선 학습한 내용들에 대해 다시 정리를 하며 학습하고, 고찰하는 과정이 필요하다고 생각하였다.<br><br>
+      그에 따라서 아래와 같이 '추가학습+문제에대한 고찰'을 해보았다.
+<img src ="https://github.com/user-attachments/assets/a0713721-0af9-4e9d-a9f6-4a7b7c444a26">
+</div>
