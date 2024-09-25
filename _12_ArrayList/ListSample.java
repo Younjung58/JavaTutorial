@@ -15,15 +15,37 @@ public class ListSample {
 		System.out.println("리스트의 길이 "+a.size());
 		System.out.println(a.get(1));
 		for (int i = 0; i < a.size(); i++) {
-			System.out.println(a.get(i));
+			System.out.println(i+": "+a.get(i));
 		}
 		System.out.println(a);
 		System.out.println("------코드응용------");
 		for (int i = 0; i < a.size(); i++) {
 			if(a.get(i).charAt(0)!='a') {
-				System.out.println(a.get(i));
+				System.out.println(i+": "+a.get(i));
 			}
 		}
+		
+		System.out.println("------중간에 새로운값 추가------");	// 특정 인덱스 위치에 추가
+		a.add(1,"쭈꾸미");
+		for (int i = 0; i < a.size(); i++) {
+			System.out.println(i+": "+a.get(i));
+		}
+		
+		System.out.println("------중간에 존재하는 값을 삭제------");	// 특정 인덱스 삭제
+		a.remove(3);
+		for (int i = 0; i < a.size(); i++) {
+			System.out.println(i+": "+a.get(i));
+		}
+		
+		System.out.println("------중간에 존재하는 값을 수정------");	// 특정 인덱스 수정
+		a.set(1,"갑오징어");
+		for (int i = 0; i < a.size(); i++) {
+			System.out.println(i+": "+a.get(i));
+		}
+		
+		System.out.println("------리스트값을 전체 삭제------");
+		a.clear(); 		// 리스트 전체 삭제
+		System.out.println(a.size());
 	}
 
 }
