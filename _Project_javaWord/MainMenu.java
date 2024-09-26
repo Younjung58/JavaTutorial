@@ -20,17 +20,19 @@ public class MainMenu {
 	}
 
 	public void prt() {
-		System.out.println("1. 단어장 사용");
-		System.out.println("2. 단어 게임 하기");
-		System.out.println("3. JAVA_WORD 종료");
-		System.out.println("원하는 항목을 선택하세요. ->");
-		Scanner in =  new Scanner(System.in);
-		int sel = in.nextInt();
-		in.nextLine();
-		if(sel==1) {
-			word.prt();
-		}else if(sel==2) {
-			game.prt();
+		while(true) {
+			System.out.println("1. 단어장 사용");
+			System.out.println("2. 단어 게임 하기");
+			System.out.println("3. JAVA_WORD 종료");
+			System.out.println("원하는 항목을 선택하세요. ->");
+			Scanner in =  new Scanner(System.in);
+			int sel = in.nextInt();
+			in.nextLine();
+			if(sel==1) {
+				word.prt();
+			}else if(sel==2) {
+				game.prt();
+			}
 		}
 	}
 

@@ -148,6 +148,32 @@ public class AllWord {
 		}
 	}
 	
+	public void delWord11() {		// 단어 삭제의 기능을 하는 메소드를 정의  => 삭제 단어 검색과 삭제를 나누어서 작성
+		System.out.println("--단어 삭제를 선택하셨습니다--");
+		System.out.println("삭제를 원하시는 단어를 입력하세요. (영어)");
+		String word = in.nextLine();
+		boolean flag = true;
+		
+		// 삭제할 단어 검색
+		int idx  =-1;
+		for (int i = 0; i < words.size(); i++) {		// 이 내용을 하나의 메소드로 정의하여 사용할 수 있음(삭제, 수정에 사용할 수 있음)
+			if(words.get(i).g_eng().equals(word)) {		
+				idx = i;
+				flag =false;
+				break;
+			}
+		}
+		// 삭제하기
+		if(idx != -1) {
+			words.remove(idx);
+		}
+		if(flag) {
+				System.out.println("해당 단어는 존재하지 않습니다.");
+		}
+	}
+	
+	
+	
 	public void modWord() {			// 단어 수정의 기능을 하는 메소드를 정의
 		System.out.println("--단어 수정을 선택하셨습니다--");
 		System.out.println("수정을 원하시는 단어를 입력하세요. (영어)");

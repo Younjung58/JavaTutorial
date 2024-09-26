@@ -53,7 +53,8 @@ public class OneWord {
 	public String g_ame() {
 		Random r = new Random(2);
 		int a = r.nextInt(); 
-		if(a==0) {
+		System.out.println(a);
+		if(a==1) {
 			return kor;
 		}else{
 			return eng;
