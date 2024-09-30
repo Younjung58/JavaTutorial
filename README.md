@@ -95,6 +95,16 @@
   https://www.canva.com/design/DAGOj4A15T0/eCT0B5ZPY5MbbCOUfFQ9YQ/edit?utm_content=DAGOj4A15T0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
   </div>
 </div>
+</br>
+<div>
+  <h4>JAVA 미니 프로젝트</h4>
+  <h6> 
+  주제: 객체와 Class에 대한 이해를 바탕으로 코드 작성해보기
+    - '동물의 숲' 게임을 모티브로한 캐릭터 키우기 게임
+  </br></br>
+  위 파일 중 - Box_Project  참조
+  </h6>
+</div>
 </br></br>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Younjung58&layout=compact"><br>
 <div>
