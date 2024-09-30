@@ -1,0 +1,49 @@
+<접근제어자> - 멤버변수랑 메소드에 접근할 수 있는 권한을 부여하는 것이다.
+
+Shop(프로젝트명)
+  l- bin(binary-2진수)  => 확장자 : .Class
+  l- src(source) => 확장자 : .Java (실제 작성 코드 O)
+	l- a(package)(M.Java / K.Java)  : a라는 package에 M,K,P Java확장자 중에 접근할 수 있는 권한을 가진것은 어떤것인가?
+	l- b(package)(P.Java)
+
+클래스: 개발자가 표현하고자 하는 대상 -> 표현방법(멤버변수, 메소드)  -> 어떤 class를 정의할 것인가, 클래스의 의존관계는?
+객체지향언어인 자바를 공부했다. 클래스과 의존관계, 접근제어자   설명  => 이걸로 어떤걸 하였다.(프로그램을 만들어본다..)
+
+접근제어자 종류
+1. default(생략가능) : pacakage내에서 접근이 가능
+2. public : 전체
+3. private : class내에서 접근이 가능
+(4. protected)
+---------------------------------------------------------------------------------------------------------------------------------
+-예시-
+Class 1: K.Java
+String name = null;			=> 멤버변수 name 선언(K 클래스 소속)
+				(접근제어자 default가 생략되어있음->같은 package안에서만 접근가능)
+public void setName(String n){	=> 지역변수 n 선언 / public 메소드 setName 정의
+	name = n;		(매개변수 값을 받아서 name 변수에 저장하는 기능의 메소드)
+}
+private void prt(){			=> private 메소드 prt 정의	
+	sysout(name);
+}
+
+
+Class 2: M.Java
+K k = new K();
+k.name		=> K클래스 name이라는 변수에 접근이 가능함
+		(접근제어자가 default인 name 변수를 가진 클래스가 같은 pacakage에 있기때문에)
+k.setName("a");	=> K클래스 setName이라는 메소드에 접근이 가능함(public)
+k.prt();		=> K클래스 prt라는 메소드에 접근이 불가능함(private)
+
+
+Class 3: P.Java
+K k = new K();		
+k.name		=> K클래스 name이라는 변수에 접근이 불가능함	
+		(접근제어자가 default인 name 변수를 가진 클래스가 다른 pacakage에 있기때문에)
+k.setName("b");	=> K클래스 setName이라는 메소드에 접근이 가능함(public)
+k.prt();		=> K클래스 prt라는 메소드에 접근이 불가능함(private)
+
+
+자원은 숨기되(private), 참조가능한 메소드는 만들어준다(public)  =>  객체지향언어의 특성(은닉화 - 기본전제)
+: 한 클래스의 private한 멤버변수(ex.private String name)에 대해서,
+  그 값을저장하는 기능을하는 public 메소드(public void setName)를 이용하여 값의 저장기능을 사용할 수 있다.
+
