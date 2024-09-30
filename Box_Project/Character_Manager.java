@@ -132,7 +132,7 @@ public class Character_Manager {
 		}
 	}
 	
-	public int check(String cname) {		// 추가. 이름 중복 확인
+	private int check(String cname) {		// 추가. 이름 중복 확인
 		for (int i = 0; i < chr.size(); i++) {
 			if(cname.equals(chr.get(i).cname)) {
 				return i;
@@ -141,7 +141,7 @@ public class Character_Manager {
 		return -1;
 	}
 	
-	public int select() {		// 추가. 사용자의 선택을 받는 기능의 메소드
+	private int select() {		// 추가. 사용자의 선택을 받는 기능의 메소드
 		Scanner in = new Scanner(System.in);
 		int sel = in.nextInt();
 		in.nextLine();
@@ -153,7 +153,7 @@ public class Character_Manager {
 		return 3;
 	}
 	
-	public boolean chrModplus(int num) {		// 추가. 변경 확인
+	private boolean chrModplus(int num) {		// 추가. 변경 확인
 		Scanner in = new Scanner(System.in);
 		boolean flag = true;
 		while(flag) {
@@ -185,7 +185,7 @@ public class Character_Manager {
 	}
 	
 
-	public boolean pwd(int num, int a) {		// 추가. 비번 확인 기능
+	private boolean pwd(int num, int a) {		// 추가. 비번 확인 기능
 		Scanner in = new Scanner(System.in);
 		boolean flag = true;
 		System.out.println("비밀번호를 입력하세요.");
