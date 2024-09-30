@@ -246,15 +246,16 @@ public class Character_Manager {
 
 	public void chrSel() {
 		Scanner in = new Scanner(System.in);
+		boolean flag = true;
+		System.out.println("원하는 캐릭터를 선택하세요.(해당 캐릭터 번호입력)");
 		while(true) {
-			System.out.println("원하는 캐릭터를 선택하세요.(해당 캐릭터 번호입력)");
 			for (int i = 0; i < chr.size(); i++) {
 				System.out.print((i+1)+": ");
 				chr.get(i).mychr();
 				System.out.println();
 			}
 			int sel = in.nextInt();
-			if(sel<=chr.size()) {
+			if(1<=sel&&sel<=chr.size()) {
 				chr.get(sel-1).active.chr(chr.get(sel-1));
 				shop.chr(chr.get(sel-1));
 				chr.get(sel-1).saveShop(shop);
@@ -262,15 +263,23 @@ public class Character_Manager {
 				break;
 			}else {
 				System.out.println("존재하지 않는 캐릭터입니다.");
-				System.out.println("1. 메인화면으로 가기 / 2. 다시 캐릭터 선택하기");
-				if(select()==1) {
-					break;
-				}else if(select()==2) {
-					continue;
-				}else {
-					select();
+				while(true) {
+					System.out.println("1. 메인화면으로 가기 / 2. 다시 캐릭터 선택하기");
+					sel = select();
+					if(sel==1) {
+						flag=false;
+						break;
+					}else if(sel==2) {
+						chrSel();
+					}else {
+						System.out.println("\n올바른 입력 방식이 아닙니다.");
+						System.out.println("다시 입력해주세요.");
+					}					
 				}
 			}			
+			if(flag==false) {
+				break;
+			}
 		}
 	}
 }
