@@ -36,7 +36,7 @@ public class test_main {
 			}else if(selNum==3) {
 				all();
 			}else if(selNum==4) {
-				delete();
+//				delete();
 			}else {
 				break;
 			}			
@@ -47,38 +47,38 @@ public class test_main {
 	
 	
 	
-	private static void delete() {
-		// TODO Auto-generated method stub
-		Scanner in = new Scanner(System.in);
-		boolean flag = true;
-		try {
-			File file = new File("영어단어.txt");
-			FileReader file_r = new FileReader(file);
-			BufferedReader buffered = new BufferedReader(file_r);
-			System.out.println("삭제할 단어를 입력하세요.");			
-			String word = in.nextLine();
-			String line = buffered.readLine();
-			
-			while(true) {
-				for (int i = 0; i < word(line).length; i++) {
-					if(word(line)[i].contains(word)){
-						System.out.println(word(line)[i]);
-						System.out.println("해당단어를 삭제합니다.");
-						line.replace(word(line)[i], null);
-						flag = false;
-						break;
-					}
-				}
-				if(flag) {
-					System.out.println("해당단어는 존재하지 않습니다.");
-					break;
-				}
-				break;	
-			}
-		}catch(Exception e) {
-			System.out.println("");			
-		}
-	}
+//	private static void delete() {
+//		// TODO Auto-generated method stub
+//		Scanner in = new Scanner(System.in);
+//		boolean flag = true;
+//		try {
+//			File file = new File("영어단어.txt");
+//			FileReader file_r = new FileReader(file);
+//			BufferedReader buffered = new BufferedReader(file_r);
+//			System.out.println("삭제할 단어를 입력하세요.");			
+//			String word = in.nextLine();
+//			String line = buffered.readLine();
+//			
+//			while(true) {
+//				for (int i = 0; i < word(line).length; i++) {
+//					if(word(line)[i].contains(word)){
+//						System.out.println(word(line)[i]);
+//						System.out.println("해당단어를 삭제합니다.");
+//						line.replace(word(line)[i], null);
+//						flag = false;
+//						break;
+//					}
+//				}
+//				if(flag) {
+//					System.out.println("해당단어는 존재하지 않습니다.");
+//					break;
+//				}
+//				break;	
+//			}
+//		}catch(Exception e) {
+//			System.out.println("");			
+//		}
+//	}
 	
 
 
