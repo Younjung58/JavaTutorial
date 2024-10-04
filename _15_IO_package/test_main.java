@@ -13,12 +13,7 @@ public class test_main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-//		File file = new File("영어단어.txt");
-//		FileWriter writer = new FileWriter(file);
-//		BufferedWriter bufferedWriter = new BufferedWriter(writer);
-//		FileReader reader = new FileReader(file);
-//		BufferedReader bufferedReader = new BufferedReader(reader);
-		
+
 		while(true) {
 			System.out.println("---영어단어장---");
 			System.out.println("1. 영어단어 저장하기");
