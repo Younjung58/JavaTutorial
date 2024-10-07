@@ -2,7 +2,7 @@ package _16_Exception;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {	// main method가 jvm에게 최종적으로 예외처림 떠넘김
 		// TODO Auto-generated method stub
 		new MemberAdmin();
 		// 바이너리 코드가 실행이 되면
@@ -12,6 +12,7 @@ public class Main {
 		// new 연산자 뒤에는 생성자를 작성한다
 		// 생성자로 객체를 만들고, 생성자(메서드)를 호출한다
 		// 생성자 메서드의 모든 코드가 종료되면 호출 위치로 리턴한다.
+		
 	}
 
 }
