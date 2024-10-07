@@ -1,0 +1,51 @@
+
+ ---RAM---
+l	  l
+l	  l
+l     jvm    l     ->  jvm(Java Binary 실행)
+l    oracle  l     -> 저장
+l	  l
+-------------
+RAM에서 jvm과 oracle은 서로 다른 영역에 존재.
+
+           (insert, delete, select, update)
+JVM 		 - > 		Oracle
+		< -
+	         (결과값)
+라이브러리 배포, 소스파일 묶음(오라클과 연동할 수 있게끔 java로 저장할 수 있는 코드를 만들어서 주는 것)
+(오라클에 접속하는 방법은 오라클이 결정해서 준다는 것.)
+(라이브러리가 class의 형태로 존재)
+(오라클사에서 어떤 class를 배포했고, 사용시 필요한것은 무엇일까? 메소드를 어떻게쓸까?)
+(라이브러리를 jvm으로 가져와서 원하는 작업을 할 수 
+
+
+
+있게함)
+
+이 상태에서, jvm에 존재하는 Member class가 있다고 가정
+<jvm영역>
+Memeber DTO
+private String id;
+private String name;
+private int age;
+
+Member m =new Memeber();
+m.id = "a";
+m.name = "kim";
+m.age = 32;
+이렇게 객체를 만들면, jvm에 저장되고, 컴퓨터를 끄면 사라짐
+
+<oracle영역>
+영구적으로 저장하고싶다. DB로,, oracle을 이용하여
+table(행과 열로 구성)을 생성
+-> insert!!
+id  l    name   l	age
+----------------------------
+a   l     kim    l	32
+b   l     Lee    l	40
+
+-> 이러한 table에 저장된 a, b 회원의 정보를 자바로 가져오고싶다.
+-> Member 객체가 2개가 필요함
+-> 이러한 정보를 나르는 역할을 하는 객체를 'DTO(Data Transfer Object)'라고 함.
+-> Database에 있는 튜플과 연관있는 객체이다.
+-> 여기서는 MemberDTO임.
