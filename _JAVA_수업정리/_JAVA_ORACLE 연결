@@ -20,7 +20,7 @@ JVM 		 - > 		Oracle
 
 이 상태에서, jvm에 존재하는 Member class가 있다고 가정
 <jvm영역>
-Memeber DTO
+- Memeber DTO class -
 private String id;
 private String name;
 private int age;
@@ -31,7 +31,7 @@ m.name = "kim";
 m.age = 32;
 이렇게 객체를 만들면, jvm에 저장되고, 컴퓨터를 끄면 사라짐
 
-<oracle영역>
+<oracle영역>`
 영구적으로 저장하고싶다. DB로,, oracle을 이용하여
 table(행과 열로 구성)을 생성
 -> insert!!
