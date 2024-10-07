@@ -1,26 +1,22 @@
 
  ---RAM---
-l	  l
-l	  l
-l     jvm    l     ->  jvm(Java Binary 실행)
-l    oracle  l     -> 저장
-l	  l
+l	  		l
+l	  		l
+l    jvm    l     ->  jvm(Java Binary 실행)
+l   oracle  l     -> 저장
+l	  		l
 -------------
 RAM에서 jvm과 oracle은 서로 다른 영역에 존재.
 
-           (insert, delete, select, update)
+    (insert, delete, select, update)
 JVM 		 - > 		Oracle
-		< -
-	         (결과값)
+			< -
+	       (결과값)
 라이브러리 배포, 소스파일 묶음(오라클과 연동할 수 있게끔 java로 저장할 수 있는 코드를 만들어서 주는 것)
 (오라클에 접속하는 방법은 오라클이 결정해서 준다는 것.)
 (라이브러리가 class의 형태로 존재)
 (오라클사에서 어떤 class를 배포했고, 사용시 필요한것은 무엇일까? 메소드를 어떻게쓸까?)
-(라이브러리를 jvm으로 가져와서 원하는 작업을 할 수 
-
-
-
-있게함)
+(라이브러리를 jvm으로 가져와서 원하는 작업을 할 수 있게함)
 
 이 상태에서, jvm에 존재하는 Member class가 있다고 가정
 <jvm영역>
