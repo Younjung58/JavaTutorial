@@ -44,7 +44,7 @@ Sub class에서 Super class자원을 포함하고 있다 - > has a
 @Override 이 표시로 컴파일러에게 오버라이드된 메소드임을 알려줌 !
 -------------------------------------------------
 상속
-  1. 정의 : super class의 자원(멤버변수, 메서드)를
+  1. 정의 : super class의 자원(멤버변수, 메서드)을
              sub class가 상속받아 sub class를 정의한것
   2. 특징 : 단일 상속, 중복코드제거,유지보수, 통일성(업무의 통일성에 기여할 수 있음 - 메서드명,멤버변수명 동일, 모두가 같은 기능으로 작업 가능)
 메서드오버라이드
@@ -71,3 +71,63 @@ is a 관계
 추상메소드는 메소드 선언은 하였으나 구현은 되지 않은 상태임
 -> super class에서 public abstract void kkk();   => 이런식으로 메소드 정의는 되어있지만 구현은 안한상태
 -> sub class는 이 메서드에 대해서 override를 반드시 해야함
+-------------------------------------------------
+service 패키지 역할(현재)
+클라이언트 요청대로 데이터베이스 접근
+콘솔에 띄워주기 (T(text)U(user)I(interface))
+서비스차원에서 view에 관련된 기능만 따로 -> 자바에서 제공하고 있는 그래픽적 요소 사용(GUI로,,)
+
+JFrame super class
+     ㅣ	<상속>(자바 awt, swing package제공)   -  is a
+     V	
+Mainframe
+
+sub class
+기능 implements(구현) 		-	has a(Mainframe은 이러한 기능을 가지고 있다.)
+	- Action Listener(인터페이스, interface - 자바에서 제공 / 이벤트 동작 처리 기능제공)
+	
+	
+상속받은 sub class에 있는 다른 기능들+CRUD기능... 의 상황에서	
+중복된 코드를 super class로 만들어서 이를 상속받는 'is a 관계'로 코드를 만들자는 컨셉
+CRUD의 기능만을 가지고 있는 별도의 무언가를 만들려고 하는 것.	(코드 수정 적게, 유지보수 편리)
+(기능 별도 정의 -> 응집도를 낮추기 위해서 *****)
+=> 클래스: CRUD로 함
+   interface: CRUD를 정의만 하고 있음(실제 구현은 X) 
+=> 클래스보다 인터페이스를 사용하는 것이 응집도를 낮추는것에 효과적이다
+-> 이 interface를 구현받아서 DAO를 만들어짐
+
+인터페이스로부터 기능을 구현받은 sub class는 인터페이스만 신경쓰면 됨
+-------------------------------------------------
+ex)
+Zooinfo(Super) 
+------------------
+String name / eat()
+     ㅣ	<상속, extends> - is a 관계(통일성, 중복된 코드 제거)
+     V	
+Tiger(Sub)		<- implementes(interface를 통하여 구현받도록)
+------------------
+MemberDAO m				 => why? 의존도를 낮추기 위해서.(Tiger가 외부의 소스의 수정에 대해서 최소한의 수정만 이루어짐)						
+ = new OMember();   => 인터페이스타입의 변수, 구현받은 OMember에 대한 객체(필요한 객체만을 생성)(다형성)
+   					=> tiger는 객체만 바꾸면 되니까 의존도를 낮췄다고 표현할 수 있음
+ -> add 나 del의 기능이 변경되면, interface로부터 구현받은 OMember만 수정하면 됨
+ => 결과적으로 interface를 사용하여 의존도를 낮출 수 있다 !!
+ 
+
+public interface MemberDAO(){		-> 인터페이스는 추상 메소드만 가질 수 있음(기능만 정의하는 것 !)
+	public void add();
+	public void del();
+}
+
+public void OMember implements(구현받음을 의미함) MemberDAO {	-> interface에서 구현받은 것을 실제 동작하는 객체를 만드는 것
+	@override
+		add(){		-> add 기능을 override를 통하여 재정의, 구현
+		}
+	@override
+		del(){		-> del 기능을 override를 통하여 재정의, 구현
+		}	
+}
+
+인터페이스로부터 구현? 
+ - 필요한 기능만을(ex. CRUD) 따로 정의만 하여(인터페이스에 추상메소드만 가능) 그 기능을 클래스가 구현받아 재정의해서(반드시) 실제 사용가능하게 함
+슈퍼클래스로부터 상속? 
+ - 슈퍼클래스의 자원(멤버변수, 메서드)을 정의해놓고 서브클래스가 상속받아 서브클래스가 정의됨(자원을 직접적으로 사용 가능, 반드시 재정의 필요 X)
